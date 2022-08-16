@@ -3,18 +3,18 @@
 \name{FindMarkersLoupe}
 \alias{FindMarkersLoupe}
 \title{A useful wrapper for Seurat that allows you to compare 2 groups of
-cellbarcodes (clusters) using the same statistical test as loupe browser}
+cellbarcodes (clusters) using the same statistical test as 10X Loupe browser}
 \usage{
 FindMarkersLoupe(seurat_obj, id.1, id.2, formatted = "short")
 }
 \arguments{
-\item{seurat_obj}{(seurat object) - Seurat object with clusters}
+\item{seurat_obj}{Seurat object with clusters}
 
-\item{id.1}{(string) - cluster name for group A}
+\item{id.1}{character string for cluster name for group A}
 
-\item{id.2}{(string) - cluster name for group B}
+\item{id.2}{character string for cluster name for group B}
 
-\item{formatted}{(str) - "short" and "full" only.
+\item{formatted}{character string "short" or "full" only to specify details in output.
 \itemize{
 \item short - (gname, intesitity 1 & 2, log2fc, adj_pvalue)
 \item full - short + additional debug purpose columns
@@ -25,5 +25,5 @@ data.frame with gname, intensities, log2fc and adj_pvalues
 }
 \description{
 A useful wrapper for Seurat that allows you to compare 2 groups of
-cellbarcodes (clusters) using the same statistical test as loupe browser
+cellbarcodes (clusters) using the same statistical test as 10X Loupe browser
 }

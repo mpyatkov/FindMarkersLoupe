@@ -339,13 +339,13 @@ compute_intensities <- function(x, cb_a, cb_b){
 }
 
 #' A useful wrapper for Seurat that allows you to compare 2 groups of
-#' cellbarcodes (clusters) using the same statistical test as loupe browser
+#' cellbarcodes (clusters) using the same statistical test as 10X Loupe browser
 #'
 #' @importFrom stats dnbinom median p.adjust pbeta qbeta quantile
-#' @param seurat_obj (seurat object) - Seurat object with clusters
-#' @param id.1 (string) - cluster name for group A
-#' @param id.2 (string) - cluster name for group B
-#' @param formatted (str) - "short" and "full" only.
+#' @param seurat_obj Seurat object with clusters
+#' @param id.1 character string for cluster name for group A
+#' @param id.2 character string for cluster name for group B
+#' @param formatted character string "short" or "full" only to specify details in output.
 #' - short - (gname, intesitity 1 & 2, log2fc, adj_pvalue)
 #' - full - short + additional debug purpose columns
 #'
