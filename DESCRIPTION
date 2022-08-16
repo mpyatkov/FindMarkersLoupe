@@ -1,12 +1,15 @@
 Package: FindMarkersLoupe
-Title: What the Package Does (One Line, Title Case)
+Title: Computes the Same Statistical Test as Loupe Browser for Seurat Object clusters comparison
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Max", "Pyatkov", , "mpyatkov@bu.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-6203-3719"))
+Description: This package provides an additional statistical method for the FindMarkers function from the Seurat package. The main purpose of this function is to match Log2FC values and p-values when we calculate the differential expression for the same clusters in the Seurat and 10X Loupe browser. By default, the 10X Loupe browser uses the Sseq and Edger methods to evaluate the differential expression, which are not implemented in the Seurat package. This package provides this functionality.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+Imports: 
+    Seurat,
+    Matrix,
+    stats
