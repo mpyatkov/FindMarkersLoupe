@@ -366,8 +366,12 @@ FindMarkersLoupe <- function(seurat_obj, id.1, id.2, formatted = "short" ) {
     ## cellbarcodes related to both clusters
     # id.1.cb <- seurat_obj@meta.data %>% filter(id_cluster == id.1) %>% pull(CB)
     # id.2.cb <- seurat_obj@meta.data %>% filter(id_cluster == id.2) %>% pull(CB)
-    id.1.cb <- seurat_obj@meta.data[seurat_obj@meta.data$id_cluster == id.1,]$CB
-    id.2.cb <- seurat_obj@meta.data[seurat_obj@meta.data$id_cluster == id.2,]$CB
+
+    # id.1.cb <- seurat_obj@meta.data[seurat_obj@meta.data$id_cluster == id.1,]$CB
+    # id.2.cb <- seurat_obj@meta.data[seurat_obj@meta.data$id_cluster == id.2,]$CB
+
+    id.1.cb <- Seurat::WhichCells(seurat_obj, idents  = id.1)
+    id.2.cb <- Seurat::WhichCells(seurat_obj, idents  = id.2)
 
     ## compute sseq parameters for pvalue
     sseq_params <- compute_sseq_params(x[,c(id.1.cb, id.2.cb)])
