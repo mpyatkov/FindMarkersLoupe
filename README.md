@@ -40,3 +40,9 @@ DE.df <- FindMarkersLoupe(hep01, id.1 = "cluster_id_1", id.2 = "cluster_id_2", f
 
 **DE.df** - is a resulted data.frame which contains gname, log2fc, intesity.1, intensity.2 and adj_pvalue columns. The data.frame will contains intermediate columns with addtional information if "formatted" option set to "full".
 
+## Acknowledgements
+
+*Created by:* Maxim Pyatkov, laboratory of David Waxman, Dept. of Biology, Boston University
+
+*Grant support:* Development of this script was carried out in the laboratory of David J Waxman, Boston University, supported in part by NIH grants R01-DK121998 (Growth Hormone Regulation of Sex Differences in Liver Metabolism) and R01-ES024421 (Epigenetic Actions of Environmental Chemicals) to DJW.
+
